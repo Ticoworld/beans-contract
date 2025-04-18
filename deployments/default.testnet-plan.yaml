@@ -1,0 +1,28 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: beans
+            expected-sender: ST34X46TAXV8EKTAZQZPWEWCYV5GSVBAJFPXFS754
+            cost: 39160
+            path: "contracts\\beans.clar"
+            anchor-block-only: true
+            clarity-version: 1
+      epoch: "2.05"
+    - id: 1
+      transactions:
+        - contract-publish:
+            contract-name: mock-sip010
+            expected-sender: ST34X46TAXV8EKTAZQZPWEWCYV5GSVBAJFPXFS754
+            cost: 7440
+            path: "contracts\\mock-sip010.clar"
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.1"

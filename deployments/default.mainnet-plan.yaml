@@ -1,0 +1,18 @@
+---
+id: 0
+name: Mainnet deployment
+network: mainnet
+stacks-node: "https://api.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoin.blockstack.com:8332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: beans
+            expected-sender: SP268NSDNZ8THZ9C1K995MVXKGYT4JNQH82DDM34T
+            cost: 33520
+            path: "contracts\\beans.clar"
+            anchor-block-only: true
+            clarity-version: 1
+      epoch: "2.05"

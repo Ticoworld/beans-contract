@@ -1,0 +1,20 @@
+[project]
+name = 'beans-contract'
+description = "A tipping contract for STX and SIP-010 tokens"
+default_network = "mainnet"
+authors = []
+telemetry = true
+cache_dir = '.\.cache'
+requirements = []
+[contracts.beans]
+path = 'contracts/beans.clar'
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
+[network.mainnet]
+rpc_url = "https://stacks-node-api.mainnet.stacks.co"
